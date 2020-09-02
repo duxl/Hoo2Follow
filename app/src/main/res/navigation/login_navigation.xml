@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_navigation"
+    app:startDestination="@id/welecomFragment">
+
+    <fragment
+        android:id="@+id/welecomFragment"
+        android:name="a.b.c.ui.fragment.login.WelcomeFragment"
+        android:label="WelecomFragment"
+        tools:layout="@layout/fragment_welcome">
+        <action
+            android:id="@+id/action_welecomFragment_to_regiestFragment"
+            app:destination="@id/regiestFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_welecomFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/regiestFragment"
+        android:name="a.b.c.ui.fragment.login.RegiestFragment"
+        android:label="RegiestFragment"
+        tools:layout="@layout/fragment_regiest">
+        <argument
+            android:name="email"
+            android:defaultValue="teaof@123.com"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="a.b.c.ui.fragment.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login" />
+</navigation>

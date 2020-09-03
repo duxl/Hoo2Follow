@@ -25,7 +25,8 @@ class LoginFragment : Fragment() {
     lateinit var loginModel: LoginModel
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        loginBinding = DataBindingUtil.inflate<FragmentLoginBinding>(inflater, R.layout.fragment_login, container, false)
+        //loginBinding = DataBindingUtil.inflate<FragmentLoginBinding>(inflater, R.layout.fragment_login, container, false)
+        loginBinding = FragmentLoginBinding.inflate(inflater, container, false)
 
         loginModel = LoginModel("Test", "", context!!)
 
@@ -47,5 +48,6 @@ class LoginFragment : Fragment() {
 
         val name = arguments?.getString("name")
         etAccount.setText(name)
+        println("duxl.debug:: etAccount.setText")
     }
 }

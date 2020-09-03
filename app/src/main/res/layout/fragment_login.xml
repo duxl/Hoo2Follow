@@ -53,6 +53,7 @@
             android:ems="10"
             android:hint="account"
             android:inputType="textPersonName"
+            app:addTextChangedWatcher="@{loginModel.nameWatcher}"
             android:onTextChanged="@{(text, start, before, count)->loginModel.onNameChanged(text)}"
             android:text="@{loginModel.n.get()}"
             app:layout_constraintEnd_toEndOf="parent"
